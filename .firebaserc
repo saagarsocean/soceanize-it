@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "soceanize-it1",
+    "firebase use production": "soceanize-it1"
+  },
+  "targets": {},
+  "etags": {}
+}
