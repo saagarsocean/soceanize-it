@@ -19,7 +19,7 @@ const PageContentLayout: React.FC<PageContentLayoutProps> = ({
           width={{ base: "100%", md: "65%" }}
           mr={{ base: 0, md: 6 }}
         >
-          {Array.isArray(children) && children[0]}
+          {children && (Array.isArray(children) ? children[0] : children)}
         </Flex>
         {/* Right Content */}
         <Box
@@ -27,7 +27,7 @@ const PageContentLayout: React.FC<PageContentLayoutProps> = ({
           flexDirection="column"
           flexGrow={1}
         >
-          {Array.isArray(children) && children[1]}
+          {children && (Array.isArray(children) ? children[1] : null)}
         </Box>
       </Flex>
     </Flex>
