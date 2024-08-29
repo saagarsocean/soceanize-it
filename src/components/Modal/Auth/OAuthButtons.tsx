@@ -1,6 +1,6 @@
 import { Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase/clientApp";
 
 type OAuthButtonsProps = {};
@@ -22,10 +22,12 @@ const OAuthButtons: React.FC<OAuthButtonsProps> = () => {
       <Button variant="oauth">Some Other Provider</Button>
       {error && (
         <Text textAlign="center" fontSize="10pt" color="red" mt={2}>
-          {error}
+          {/* Use String(error) to ensure it's rendered as a string */}
+          {String(error)}
         </Text>
       )}
     </Flex>
   );
 };
+
 export default OAuthButtons;
