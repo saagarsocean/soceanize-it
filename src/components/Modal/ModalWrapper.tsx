@@ -11,10 +11,11 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-type ModalWrapperProps = {
+interface ModalWrapperProps {
   isOpen: boolean;
   onClose: () => void;
-};
+  children: React.ReactNode; // Ensure children is included here
+}
 
 const ModalWrapper: React.FC<ModalWrapperProps> = ({
   children,
